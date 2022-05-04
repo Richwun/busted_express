@@ -12,7 +12,7 @@ app.engine('html', es6Renderer);
 app.set('views', './views');
 app.set('view engine', 'html');
 
-const server = http.createServer(app);
+const server = http.createServer((req, res) => {
 
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}`)
